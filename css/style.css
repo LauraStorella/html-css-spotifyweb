@@ -1,0 +1,110 @@
+/* BOOTSTRAP CLASS - start */
+bootstrap {}       /*  */
+  /* Navbar */
+  .navbar          /* Creates a navigation bar */
+  .navbar-collapse /* Collapses the navbar (hidden and replaced with a menu/hamburger icon on mobile phones and small tablets) */
+
+  /* List */
+  .list-group      /* Creates a bordered list group for <li> elements */
+  .list-inline     /* Places all list items on a single line (horizontal menu) */
+  .list-unstyled   /* Removes all default list-style (bullets, left margin, etc.) styling from a <ul> or <ol> list */
+/* BOOTSTRAP CLASS - end */
+
+
+/* DEBUGG - start rules*/
+debug {}
+  .debug .container {
+    background-color: #16D893;
+    border: 1px solid blue;
+  }
+  .debug [class*="col-"] {
+    background-color: yellow;
+    border: 1px solid red;
+    height: 100px;
+  }
+/* DEBUGG - end rules */
+
+
+/* GENERAL RULES (reset) - start */
+general-rules {}
+  body {
+    font-family: 'Quicksand', verdana, sans-serif;
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul {
+      padding-left: 0;
+    }
+    ul li {
+      display: inline-block;
+      list-style: none;
+    }
+    ul li a {
+      text-decoration: none;
+    }
+/* GENERAL RULES (reset) - end */
+
+
+/* CLASS PROPERTIES - start rules */
+class_properties {}
+  .ms_float {
+    float: left;
+  }
+  .ms_clearfix {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .ms_transform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .ms_calc-width {
+    width: calc(100% / )
+  }
+/* CLASS PROPERTIES - end rules */
+
+
+/* COMPONENTS (reusable) - start rules */
+components {}
+  components
+/* COMPONENTS (reusable) - end rules */
+
+
+/* NAVBAR - start rules */
+nav {}
+  nav
+/* NAVBAR - end rules */
+
+
+/* HEADER - start rules */
+header {}
+  header
+/* HEADER - end rules */
+
+
+/* MAIN - start rules */
+main {}
+  main
+/* MAIN - end rules */
+
+
+/* FOOTER - start rules */
+footer {}
+  footer
+/* FOOTER - end rules */
+
+
+/* MEDIA QUERY -start rules */
+@media query {}
+  @media all and () {}
+  @media all and (max-width: 767px) {}
+  @media all and (min-width: 768px) and (max-width: 991px) {}
+  @media all and (min-width: 992px) {}
+/* MEDIA QUERY -end rules */
