@@ -75,6 +75,7 @@ nav {}
     position: fixed;
     height: calc(100% - 90px);
     width: 300px;
+    z-index: 2;
   }
   .ms_sidebar .ms_logo--big img {
     width: 70%;
@@ -127,6 +128,8 @@ main {}
   .ms_albums {
     height: calc(100vh - 90px);
     background: lightblue;
+    overflow: scroll;
+    z-index: 1;
   }
   .ms_title {
     font-size: 18px;
@@ -141,7 +144,6 @@ main {}
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    overflow: auto;
   }
   .ms_section__cover img {
     width: 60%;
@@ -150,7 +152,11 @@ main {}
   /* Section player */
   .ms_player {
     height: 90px;
+    width: 100%;
     background-color: goldenrod;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
   }
 
 /* MAIN - end rules */
