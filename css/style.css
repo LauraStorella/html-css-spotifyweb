@@ -1,18 +1,5 @@
-/* BOOTSTRAP CLASS - start */
-bootstrap {}       /*  */
-  /* Navbar */
-  .navbar          /* Creates a navigation bar */
-  .navbar-collapse /* Collapses the navbar (hidden and replaced with a menu/hamburger icon on mobile phones and small tablets) */
-
-  /* List */
-  .list-group      /* Creates a bordered list group for <li> elements */
-  .list-inline     /* Places all list items on a single line (horizontal menu) */
-  .list-unstyled   /* Removes all default list-style (bullets, left margin, etc.) styling from a <ul> or <ol> list */
-/* BOOTSTRAP CLASS - end */
-
-
 /* DEBUGG - start rules*/
-debug {}
+/* debug {}
   .debug .container {
     background-color: #16D893;
     border: 1px solid blue;
@@ -21,40 +8,47 @@ debug {}
     background-color: yellow;
     border: 1px solid red;
     height: 100px;
-  }
+  } */
 /* DEBUGG - end rules */
 
 
 /* GENERAL RULES (reset) - start */
 general-rules {}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body {
     font-family: 'Quicksand', verdana, sans-serif;
-    font-size: 16px;
+    color: white;
+    font-weight: bold;
   }
 
-  img {
+  /* img {
     width: 100%;
   }
 
   ul {
       padding-left: 0;
     }
-    ul li {
-      display: inline-block;
+    ul li { */
+      /* display: inline-block;
       list-style: none;
     }
     ul li a {
       text-decoration: none;
-    }
+      color: white;
+    } */
 /* GENERAL RULES (reset) - end */
 
 
 /* CLASS PROPERTIES - start rules */
 class_properties {}
-  .ms_float {
+  /* .ms_float {
     float: left;
-  }
-  .ms_clearfix {
+  } */
+  .ms_clearfix::after {
     content: "";
     display: table;
     clear: both;
@@ -65,9 +59,6 @@ class_properties {}
     left: 50%;
     transform: translate(-50%,-50%);
   }
-  .ms_calc-width {
-    width: calc(100% / )
-  }
 /* CLASS PROPERTIES - end rules */
 
 
@@ -76,22 +67,92 @@ components {}
   components
 /* COMPONENTS (reusable) - end rules */
 
-
 /* NAVBAR - start rules */
 nav {}
-  nav
+  /* Sidebar - top menu */
+  .ms_sidebar {
+    background-color: darkgray;
+    position: fixed;
+    height: calc(100% - 90px);
+    width: 300px;
+  }
+  .ms_sidebar .ms_logo--big img {
+    width: 70%;
+  }
+  .ms_menu__menu-sidebar .ms_top-menu ul {
+      padding-left: 0;
+  }
+  .ms_menu__menu-sidebar .ms_top-menu li {
+    /* display: inline-block; */
+    list-style: none;
+  }
+  .ms_menu__menu-sidebar .ms_top-menu img {
+    width: 25px;
+  }
+  .ms_menu__menu-sidebar .ms_top-menu a {
+    text-decoration: none;
+    color: white;
+  }
 /* NAVBAR - end rules */
 
 
 /* HEADER - start rules */
 header {}
-  header
+  .ms_header .ms_topbar {
+    position: fixed;
+    top: 0;
+    left: 300px; /* sidebar width */
+    right: 0;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .ms_header .ms_topbar__btn-cta {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
 /* HEADER - end rules */
 
 
 /* MAIN - start rules */
 main {}
-  main
+  /* Section album covers */
+  .ms_albums {
+    height: calc(100vh - 90px);
+    background: lightblue;
+  }
+  .ms_title {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .ms_section {
+    border-color: 1px solid red;
+    margin-top: 100px;
+    margin-left: 330px;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+  }
+  .ms_section__cover img {
+    width: 60%;
+  }
+
+  /* Section player */
+  .ms_player {
+    height: 90px;
+    background-color: goldenrod;
+  }
+
 /* MAIN - end rules */
 
 
@@ -108,3 +169,16 @@ footer {}
   @media all and (min-width: 768px) and (max-width: 991px) {}
   @media all and (min-width: 992px) {}
 /* MEDIA QUERY -end rules */
+
+
+/* BOOTSTRAP CLASS - start */
+/* bootstrap {}       /*  */
+  /* Navbar */
+  /* .navbar          /* Creates a navigation bar */
+  /* .navbar-collapse /* Collapses the navbar (hidden and replaced with a menu/hamburger icon on mobile phones and small tablets) */ */
+
+  /* List */
+  /* .list-group      /* Creates a bordered list group for <li> elements */ */
+  /* .list-inline     /* Places all list items on a single line (horizontal menu) */ */
+  /* .list-unstyled   /* Removes all default list-style (bullets, left margin, etc.) styling from a <ul> or <ol> list */ */
+/* BOOTSTRAP CLASS - end */
