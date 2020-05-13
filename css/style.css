@@ -94,21 +94,34 @@ main {}
     height: calc(100% - 100px) /* h footer 100px */
   }
 
-  /* Sidebar - top menu */
+  /* Sidebar section */
   main .ms_sidebar {}
     .ms_sidebar {
       background-color: darkgray;
       height: 100%;
       width: 300px;
       float: left;
+      overflow: hidden;
     }
     .ms_sidebar .ms_logo--big img {
-      width: 70%;
+      width: 60%;
     }
-    .ms_menu__menu-sidebar .ms_top-menu ul {
+    .ms_sidebar__element-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .ms_menu__menu-sidebar,
+    .ms_menu__menu-sidebar__menu-utente {
+      padding: 15px;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .ms_menu__menu-sidebar ul {
         padding-left: 0;
     }
-    .ms_menu__menu-sidebar .ms_top-menu li {
+    .ms_menu__menu-sidebar li {
       /* display: inline-block; */
       list-style: none;
     }
@@ -120,13 +133,18 @@ main {}
       color: white;
     }
 
+  /* Main-content section */
   main .ms_main-content {}
     .ms_main-content {
       background-color: lightgray;
-      width: 100%;
+      width: calc(100% - 300px);
       height: 100%;
+      padding: 20px;
+      float: left;
+      overflow-y: auto;
     }
 
+    /* Header - topbar */
     .ms_header {
       background-color: black;
       text-align: right;
@@ -180,7 +198,7 @@ footer {}
   footer.ms_player {
     height: 100px;
     width: 100%;
-    background-color: goldenrod;
+    background-color: black;
   }
 
 /* FOOTER - end rules */
