@@ -13,106 +13,142 @@
   </head>
   <body class="debu">
 
-    <!-- Main - inizio -->
-    <main class="ms_albums">
+    <div class="ms_app-wrapper">
 
-      <!-- Sidebar - inizio -->
-      <nav id="ms_sidebar" class="ms_sidebar">
+      <!-- Main - inizio -->
+      <main>
 
-        <div class="ms_logo--big">
-          <img src="img/logo.svg" alt="Spotify-logo">
-        </div>
+        <!-- Sidebar - inizio -->
+        <section id="ms_sidebar" class="ms_sidebar">
 
-        <div class="ms_menu__menu-sidebar">
-          <ul class="ms_top-menu">
-            <li>
-              <img src="img/home.svg" alt="home-icon">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <img src="img/search.svg" alt="lens-icon">
-              <a href="#">Cerca</a>
-            </li>
-            <li>
-              <img src="img/libreria.svg" alt="books-icon">
-              <a href="#">La tua libreria</a>
-            </li>
-          </ul>
-        </div>
+          <div class="ms_sidebar__element-container">
 
-        <div class="ms_menu__menu-sidebar">
-          <h4>PLAYLIST</h4>
-          <ul class="ms_bottom-menu">
-            <li>Nome Playlist</li>
-          </ul>
+            <!-- Logo -->
+            <div class="ms_logo--big">
+              <img src="img/logo.svg" alt="Spotify-logo">
+            </div>
 
-        </div>
-      </nav>
-      <!-- Sidebar - fine -->
+            <!-- Menu ricerca -->
+            <div class="ms_menu__menu-sidebar">
+              <ul class="ms_top-menu">
+                <li>
+                  <img src="img/home.svg" alt="home-icon">
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <img src="img/search.svg" alt="lens-icon">
+                  <a href="#">Cerca</a>
+                </li>
+                <li>
+                  <img src="img/libreria.svg" alt="books-icon">
+                  <a href="#">La tua libreria</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Menu playlist -->
+            <div class="ms_menu__menu-sidebar">
+              <h4>PLAYLIST</h4>
+              <ul class="ms_bottom-menu">
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+              </ul>
+            </div>
+
+            <!-- Menu utente -->
+            <div class="ms_menu__menu-sidebar__menu-utente">
+              <p>Installa app</p>
+              <h5>Nome Utente</h5>
+            </div>
+
+          </div>
+
+        </section>
+        <!-- Sidebar - fine -->
+
+        <section class="ms_main-content">
+          
+          <!-- Header - inizio -->
+          <header id="ms_header" class="ms_header">
+            <div class="ms_topbar">
+              <button class="ms_topbar__btn-cta" type="button" name="button">Effettua l'upgrade</button>
+            </div>
+          </header>
+          <!-- Header - fine -->
+
+        </section>
 
 
-      <!-- Header - inizio -->
-      <header id="ms_header" class="ms_header">
-        <div class="ms_topbar">
-          <button class="ms_topbar__btn-cta" type="button" name="button">Effettua l'upgrade</button>
-
-        </div>
-
-      </header>
-      <!-- Header - fine -->
 
 
-      <!-- Section with album covers -->
-      <h2 class="ms_title">Titolo</h2>
 
-      <section id="ms_recently-played" class="ms_section">
+        <!-- Section with album covers -->
+        <!-- <h2 class="ms_title">Titolo</h2>
 
-        <div class="ms_section__box">
-          <div class="ms_section__cover">
-            <img src="img/metal_lifting.jpg" alt="Meal-lifting">
-            <div class="text">
-              <a href="#">
-                <h3>Titolo</h3>
-              </a>
+        <section id="ms_recently-played" class="ms_section">
+
+          <div class="ms_section__box">
+            <div class="ms_section__cover">
+              <img src="img/metal_lifting.jpg" alt="Meal-lifting">
+              <div class="text">
+                <a href="#">
+                  <h3>Titolo</h3>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="ms_section__box">
-          <div class="ms_section__cover">
-            <img src="img/metal_lifting.jpg" alt="Meal-lifting">
-            <div class="text">
-              <a href="#">
-                <h3>Titolo</h3>
-              </a>
+          <div class="ms_section__box">
+            <div class="ms_section__cover">
+              <img src="img/metal_lifting.jpg" alt="Meal-lifting">
+              <div class="text">
+                <a href="#">
+                  <h3>Titolo</h3>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="ms_section__box">
+            <div class="ms_section__cover">
+              <img src="img/metal_lifting.jpg" alt="Meal-lifting">
+              <div class="text">
+                <a href="#">
+                  <h3>Titolo</h3>
+                </a>
+              </div>
+            </div>
+          </div>
 
-      </section>
+          <div class="ms_section__box">
+            <div class="ms_section__cover">
+              <img src="img/metal_lifting.jpg" alt="Meal-lifting">
+              <div class="text">
+                <a href="#">
+                  <h3>Titolo</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- Section with album covers -->
 
-      <!-- Section with album covers -->
-
+      </main>
+      <!-- Main - fine -->
 
       <!-- Player - inizio -->
-      <section id="ms_player" class="ms_player">
-      </section>
+      <footer id="ms_player" class="ms_player">
+      </foooter>
       <!-- Player - fine -->
 
-    </main>
-    <!-- Main - fine -->
+
+    </div>
+
 
   </body>
 </html>

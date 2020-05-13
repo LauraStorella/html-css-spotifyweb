@@ -25,6 +25,13 @@ general-rules {}
     font-weight: bold;
   }
 
+  .ms_app-wrapper {
+    /* background-color: lightgreen; */
+    height: 100vh;
+    width: 100%;
+    min-width: 500px;
+  }
+
   /* img {
     width: 100%;
   }
@@ -69,68 +76,84 @@ components {}
 
 /* NAVBAR - start rules */
 nav {}
-  /* Sidebar - top menu */
-  .ms_sidebar {
-    background-color: darkgray;
-    position: fixed;
-    height: calc(100% - 90px);
-    width: 300px;
-    z-index: 2;
-  }
-  .ms_sidebar .ms_logo--big img {
-    width: 70%;
-  }
-  .ms_menu__menu-sidebar .ms_top-menu ul {
-      padding-left: 0;
-  }
-  .ms_menu__menu-sidebar .ms_top-menu li {
-    /* display: inline-block; */
-    list-style: none;
-  }
-  .ms_menu__menu-sidebar .ms_top-menu img {
-    width: 25px;
-  }
-  .ms_menu__menu-sidebar .ms_top-menu a {
-    text-decoration: none;
-    color: white;
-  }
+  nav {}
 /* NAVBAR - end rules */
 
 
 /* HEADER - start rules */
 header {}
-  .ms_header .ms_topbar {
-    position: fixed;
-    top: 0;
-    left: 300px; /* sidebar width */
-    right: 0;
-    height: 70px;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .ms_header .ms_topbar__btn-cta {
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 30px;
-    padding: 10px;
-    margin-right: 20px;
-    text-transform: uppercase;
-  }
+  header {}
 /* HEADER - end rules */
 
 
 /* MAIN - start rules */
 main {}
+  main {
+    background-color: lightcoral;
+    width: 100%;
+    height: calc(100% - 100px) /* h footer 100px */
+  }
+
+  /* Sidebar - top menu */
+  main .ms_sidebar {}
+    .ms_sidebar {
+      background-color: darkgray;
+      height: 100%;
+      width: 300px;
+      float: left;
+    }
+    .ms_sidebar .ms_logo--big img {
+      width: 70%;
+    }
+    .ms_menu__menu-sidebar .ms_top-menu ul {
+        padding-left: 0;
+    }
+    .ms_menu__menu-sidebar .ms_top-menu li {
+      /* display: inline-block; */
+      list-style: none;
+    }
+    .ms_menu__menu-sidebar .ms_top-menu img {
+      width: 25px;
+    }
+    .ms_menu__menu-sidebar .ms_top-menu a {
+      text-decoration: none;
+      color: white;
+    }
+
+  main .ms_main-content {}
+    .ms_main-content {
+      background-color: lightgray;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ms_header {
+      background-color: black;
+      text-align: right;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: calc(100% - 300px);
+      height: 70px;
+    }
+
+    .ms_header .ms_topbar__btn-cta {
+      background-color: black;
+      border: 1px solid white;
+      border-radius: 30px;
+      padding: 10px;
+      margin-right: 20px;
+      text-transform: uppercase;
+    }
+
+
   /* Section album covers */
-  .ms_albums {
-    height: calc(100vh - 90px);
+  /* .ms_albums {
+    height: calc(100vh - 100px);
     background: lightblue;
     overflow: scroll;
     z-index: 1;
-  }
+  } */
   .ms_title {
     font-size: 18px;
     margin-top: 0;
@@ -142,29 +165,24 @@ main {}
     /* height: 100vh; */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
   }
   .ms_section__cover img {
     width: 60%;
   }
-
-  /* Section player */
-  .ms_player {
-    height: 90px;
-    width: 100%;
-    background-color: goldenrod;
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
-  }
-
 /* MAIN - end rules */
 
 
 /* FOOTER - start rules */
 footer {}
-  footer
+  footer.ms_player {
+    height: 100px;
+    width: 100%;
+    background-color: goldenrod;
+  }
+
 /* FOOTER - end rules */
 
 
