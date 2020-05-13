@@ -32,21 +32,20 @@ general-rules {}
     min-width: 500px;
   }
 
-  /* img {
+  img {
     width: 100%;
   }
 
   ul {
       padding-left: 0;
     }
-    ul li { */
-      /* display: inline-block;
+    ul li {
+      /* display: inline-block; */
       list-style: none;
     }
     ul li a {
       text-decoration: none;
-      color: white;
-    } */
+    }
 /* GENERAL RULES (reset) - end */
 
 
@@ -147,6 +146,7 @@ main {}
       width: calc(100% - 300px);
       height: 100%;
       padding: 20px;
+      padding-top: 110px;
       float: left;
       overflow-y: auto;
     }
@@ -169,17 +169,19 @@ main {}
       padding: 10px;
       margin-right: 20px;
       text-transform: uppercase;
+      color: white;
     }
 
 
   /* Section album covers */
+  .ms_section__title {
+    margin-bottom: 10px;
+  }
   .ms_title {
     font-size: 18px;
-    margin-top: 0;
   }
   .ms_section {
     border-color: 1px solid red;
-    padding-top: 80px;
     /* width: calc(100% - 300px);
     height: calc(100% - 170px); */
     display: flex;
@@ -188,8 +190,16 @@ main {}
     align-items: flex-start;
     /* flex-wrap: wrap; */
   }
+  .ms_section__box {
+    flex-basis: 15%;
+  }
   .ms_section__cover img {
     width: 60%;
+  }
+  .ms_section_cover a {
+    color: #b3b3b3;
+    font-size: 0.8rem;
+    text-decoration: none;
   }
 /* MAIN - end rules */
 
