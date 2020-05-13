@@ -115,8 +115,15 @@ main {}
     .ms_menu__menu-sidebar,
     .ms_menu__menu-sidebar__menu-utente {
       padding: 15px;
-      overflow-y: auto;
+      overflow: hidden;
       flex-shrink: 0;
+    }
+    .ms_menu__menu-sidebar__playlist-container {
+      padding: 15px;
+      overflow-y: auto;
+    }
+    .ms_menu__menu-sidebar__playlist-container li {
+      list-style: none;
     }
     .ms_menu__menu-sidebar ul {
         padding-left: 0;
@@ -146,7 +153,7 @@ main {}
 
     /* Header - topbar */
     .ms_header {
-      background-color: black;
+      background-color: rgba(0,0,0,0.5);
       text-align: right;
       position: fixed;
       top: 0;
@@ -166,21 +173,15 @@ main {}
 
 
   /* Section album covers */
-  /* .ms_albums {
-    height: calc(100vh - 100px);
-    background: lightblue;
-    overflow: scroll;
-    z-index: 1;
-  } */
   .ms_title {
     font-size: 18px;
     margin-top: 0;
   }
   .ms_section {
     border-color: 1px solid red;
-    margin-top: 100px;
-    margin-left: 330px;
-    /* height: 100vh; */
+    padding-top: 80px;
+    /* width: calc(100% - 300px);
+    height: calc(100% - 170px); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
