@@ -12,24 +12,21 @@
 /* DEBUGG - end rules */
 
 
+
 /* GENERAL RULES (reset) - start */
-general-rules {}
+general rules {}
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    font-family: 'Quicksand', verdana, sans-serif;
-    color: white;
-    font-weight: bold;
-  }
 
-  .ms_app-wrapper {
-    /* background-color: lightgreen; */
-    height: 100vh;
-    width: 100%;
-    min-width: 500px;
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+  }
+  body div, span, ul, a {
+    font-family: 'Open Sans', sans-serif;
   }
 
   img {
@@ -49,29 +46,72 @@ general-rules {}
 /* GENERAL RULES (reset) - end */
 
 
+
 /* CLASS PROPERTIES - start rules */
 class_properties {}
-  /* .ms_float {
+  /* .float {
     float: left;
   } */
-  .ms_clearfix::after {
+  .clearfix::after {
     content: "";
     display: table;
     clear: both;
   }
-  .ms_transform {
+  .transform {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
+  .text-bold {
+    font-weight: 700;
+  }
 /* CLASS PROPERTIES - end rules */
+
+
+
+/* BASE LAYOUT - inizio */
+regole layout {}
+  .app-wrapper {
+    height: 100vh;
+    width: 100%;
+    min-width: 500px;
+    /* background-color: lightgreen; */
+  }
+  main {
+    width: 100%;
+    height: calc(100% - 100px) /* h footer 100px */
+    /* background-color: lightcoral; */
+  }
+  main.sidebar {
+    height: 100%;
+    width: 300px;
+    background-color: darkgray;
+  }
+  main.main-content {
+    height: 100%;
+    width: calc(100% - 300px);
+    background-color: lightgray;
+  }
+  main.header {
+    height: 70px;
+    width: calc(100% - 300px);
+  }
+  footer.player {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+  }
+/* BASE LAYOUT - fine */
+
 
 
 /* COMPONENTS (reusable) - start rules */
 components {}
   components
 /* COMPONENTS (reusable) - end rules */
+
+
 
 /* NAVBAR - start rules */
 nav {}
@@ -93,55 +133,117 @@ main {}
     height: calc(100% - 100px) /* h footer 100px */
   }
 
+  /* SIDEBAR - inizio */
   /* Sidebar section */
-  main .ms_sidebar {}
-    .ms_sidebar {
-      background-color: darkgray;
+  main .sidebar {}
+    .sidebar {
+      background-color: #040404;
       height: 100%;
       width: 300px;
+      padding: 5px 10px 0;
+      color: #919496;
       float: left;
       overflow: hidden;
     }
-    .ms_sidebar .ms_logo--big img {
-      width: 60%;
+    .sidebar a {
+      color: #919496;
     }
-    .ms_sidebar__element-container {
+    .sidebar a:hover {
+      color: white;
+    }
+    .sidebar .sidebar-item-container {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
     }
-    .ms_menu__menu-sidebar,
-    .ms_menu__menu-sidebar__menu-utente {
+    .sidebar-item ul {
+        padding-left: 0;
+    }
+    .sidebar-item li {
+      /* display: inline-block; */
+      list-style: none;
+    }
+    .sidebar-item,
+    .sidebar-item .menu-utente {
       padding: 15px;
       overflow: hidden;
       flex-shrink: 0;
     }
-    .ms_menu__menu-sidebar__playlist-container {
+
+    /* Logo */
+    .sidebar .logo {
+      padding-bottom: 10px;
+    }
+    .sidebar .logo img {
+      width: 90%;
+    }
+
+    /* Top menu */
+    .sidebar-item .top-menu img {
+      width: 25px;
+    }
+    .sidebar-item .top-menu a {
+      text-decoration: none;
+    }
+    .sidebar-item .top-menu li:first-child a {
+      color: white;
+    }
+    .sidebar-item .top-menu li:first-child {
+      border-left: 2px solid lime;
+    }
+
+    /* Menu Playlist */
+    .menu-sidebar.playlist-container {
+      padding-top: 20px;
       padding: 15px;
       overflow-y: auto;
     }
-    .ms_menu__menu-sidebar__playlist-container li {
-      list-style: none;
+    .menu-sidebar .add-playlist {
+      padding: 5px 0;
     }
-    .ms_menu__menu-sidebar ul {
-        padding-left: 0;
-    }
-    .ms_menu__menu-sidebar li {
-      /* display: inline-block; */
-      list-style: none;
-    }
-    .ms_menu__menu-sidebar .ms_top-menu img {
-      width: 25px;
-    }
-    .ms_menu__menu-sidebar .ms_top-menu a {
+    .menu-sidebar a.playlist-title {
       text-decoration: none;
-      color: white;
+    }
+    .menu-sidebar .add-playlist span {
+      font-size: 20px;
+    }
+    .bottom-menu--item>li:first-child {
+      margin-top: 10px;
+    }
+    .bottom-menu--item>li:not(:first-child) {
+      margin-top: 5px;
+    }
+    .menu-sidebar.playlist-container li {
+      list-style: none;
+    }
+    .menu-sidebar.playlist-container i {
+      font-size: 35px;
+    }
+    .menu-sidebar.playlist-container a {
+      font-size: 15px;
     }
 
-  /* Main-content section */
-  main .ms_main-content {}
-    .ms_main-content {
+    /* Menu utente */
+    .menu-sidebar.menu-utente {
+      padding: 15px;
+      font-size: 16px;
+    }
+    hr {
+      margin: 10px 0;
+    }
+    .menu-sidebar.menu-utente .avatar i {
+      font-size: 35px;
+    }
+    .menu-sidebar.menu-utente .avatar span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  /* SIDEBAR - fine */
+
+  /* MAIN-CONTENT section */
+  main .main-content {}
+    .main-content {
       background-color: lightgray;
       width: calc(100% - 300px);
       height: 100%;
@@ -151,8 +253,8 @@ main {}
       overflow-y: auto;
     }
 
-    /* Header - topbar */
-    .ms_header {
+    /* HEADER - topbar */
+    .header {
       background-color: rgba(0,0,0,0.5);
       text-align: right;
       position: fixed;
@@ -162,7 +264,7 @@ main {}
       height: 70px;
     }
 
-    .ms_header .ms_topbar__btn-cta {
+    .header .topbar.btn-cta {
       background-color: black;
       border: 1px solid white;
       border-radius: 30px;
@@ -173,14 +275,14 @@ main {}
     }
 
 
-  /* Section album covers */
-  .ms_section__title {
+  /* ALBUM COVERS section */
+  .section-title {
     margin-bottom: 10px;
   }
-  .ms_title {
+  .title {
     font-size: 18px;
   }
-  .ms_section {
+  .section {
     border-color: 1px solid red;
     /* width: calc(100% - 300px);
     height: calc(100% - 170px); */
@@ -190,13 +292,13 @@ main {}
     align-items: flex-start;
     /* flex-wrap: wrap; */
   }
-  .ms_section__box {
-    flex-basis: 15%;
+  .section-box {
+    flex-basis: 20%;
   }
-  .ms_section__cover img {
+  .section-cover img {
     width: 60%;
   }
-  .ms_section_cover a {
+  .section-cover a {
     color: #b3b3b3;
     font-size: 0.8rem;
     text-decoration: none;
@@ -204,15 +306,59 @@ main {}
 /* MAIN - end rules */
 
 
+
 /* FOOTER - start rules */
 footer {}
-  footer.ms_player {
+  footer.player {
     height: 100px;
     width: 100%;
-    background-color: black;
+    padding: 5px;
+    background-color: #181818;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Left-col */
+  .bottom-bar.left-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* position: relative;
+    left: 0; */
+  }
+
+  .bottom-bar .current-song {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bottom-bar .current-song.img {
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+  }
+  .bottom-bar.left-col.current-song.details {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom-bar.left-col.current-song.details a {
+    text-decoration: none;
+  }
+
+  .bottom-bar.left-col.icons {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .bottom-bar.left-col.icons a:hover {
+    color: white;
   }
 
 /* FOOTER - end rules */
+
 
 
 /* MEDIA QUERY -start rules */
