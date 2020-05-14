@@ -296,6 +296,24 @@ main {}
   .cover-item {
     width: 180px;
     height: 180px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-item .overlay {
+    
+  }
+
+  .btn-play-wrapper {
+    display: none;
+  }
+  .btn-play-wrapper i {
+    font-size: 40px;
+    color: white;
+    z-index: 2;
+ }
+  .cover-item:hover .btn-play-wrapper {
+    display: block;
   }
 
   .section-body.popular .cover-item {
