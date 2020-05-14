@@ -85,6 +85,17 @@
             <div class="topbar">
               <button class="topbar btn-cta" type="button" name="button">Effettua l'upgrade</button>
             </div>
+
+            <div class="bottombar">
+              <ul class="list-unstyled">
+                <li><a href="#">In evidenza</a></li>
+                <li><a href="#">Podcast</a></li>
+                <li><a href="#">Classifiche</a></li>
+                <li><a href="#">Generi e mood</a></li>
+                <li><a href="#">Nuove uscite</a></li>
+                <li><a href="#">Scopri</a></li>
+              </ul>
+            </div>
           </header>
           <!-- Header - fine -->
 
@@ -257,14 +268,12 @@
       <footer id="player" class="player">
         <!-- Left-col -->
         <div class="bottom-bar col left-col">
-
-          <div class="bottom-bar left-col current-song">
-
-            <div class="bottom-bar left-col current-song img">
+          <div class="bottom-bar col left-col current-song">
+            <div class="bottom-bar col left-col current-song img">
                 <img src="img/sinister.jpeg" alt="sinister-song">
             </div>
 
-            <div class="bottom-bar left-col current-song details">
+            <div class="bottom-bar col left-col current-song details">
               <div class="song-title">
                 <a href="#" class="">Sinister</a>
               </div>
@@ -272,88 +281,55 @@
                 <a href="#" class="">Brano Nome</a>
               </div>
             </div>
-
           </div>
 
-          <div class="bottom-bar left-col icons">
-            <span class="bottom-bar left-col icons favorite">
-                <a href="#"><i class="far fa-heart"></i></a>
+          <div class="bottom-bar col left-col icons">
+            <span class="bottom-bar col left-col icons favorite">
+              <a href="#"><i class="far fa-heart"></i></a>
             </span>
-            <span class="bottom-bar left-col icons folder">
-                <a href="#"><i class="far fa-folder"></i></a>
+            <span class="bottom-bar col left-col icons folder">
+              <a href="#"><i class="far fa-folder"></i></a>
             </span>
           </div>
         </div>
-
 
         <!-- Middle-col -->
-        <!-- <div class="bottom-bar middle-col">
-          Display centrale
-        </div> -->
+        <div class="bottom-bar col middle-col">
 
+          <div class="player">
+            <div class="player-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="far fa-play-circle"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-redo"></i>
+            </div>
+
+            <div class="player-bar">
+              <!-- <span class="start-time">0:00</span>
+              <span class="end-time">4:35</span> -->
+            </div>
+            <div class="player-bar--darkgray"></div>
+            <div class="player-bar-time-control"></div>
+          </div>
+        </div>
 
         <!-- Right-col -->
-        <!-- <div class="bottom-bar right-col">
-
-          <div class="bottom-bar right-col current-song">
-
-            <div class="bottom-bar right-col current-song img">
-                <img src="img/sinister.jpeg" alt="sinister-song">
-            </div>
-
-            <div class="bottom-bar right-col current-song details">
-              <div class="song-title">
-                <a href="#" class="">Sinister</a>
-              </div>
-              <div class="artist-name">
-                <a href="#" class="">Brano Nome</a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="bottom-bar right-col icons">
-            <span class="bottom-bar right-col icons favorite">
-                <a href="#"><i class="far fa-heart"></i></a>
-            </span>
-            <span class="bottom-bar right-col icons folder">
-                <a href="#"><i class="far fa-folder"></i></a>
-            </span>
-          </div>
-        </div> -->
-
-
-
-
-        <!-- DEBUG-FOOTER -->
-
-        <!-- lEFT-col -->
-        <!-- <div class="bottom-bar col left-col">
-          colonna sinistra
-        </div> -->
-
-        <!-- MIDDLE-col -->
-        <div class="bottom-bar col middle-col">
-          Display centrale
-        </div>
-
-        <!-- RIGHT-col -->
         <div class="bottom-bar col right-col">
-          colonna destra
+
+          <div id="settings" class="player">
+            <div class="player-buttons">
+              <i class="fas fa-list"></i>
+              <i class="fas fa-desktop"></i>
+              <i class="fas fa-volume-up"></i>
+            </div>
+
+            <div class="player-bar"></div>
+            <div class="player-bar--darkgray"></div>
+            <div class="player-bar-time-control"></div>
+          </div>
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
       </footer>
       <!-- Player - fine -->
 

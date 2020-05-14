@@ -32,17 +32,6 @@ general rules {}
   img {
     width: 100%;
   }
-
-  ul {
-      padding-left: 0;
-    }
-    ul li {
-      /* display: inline-block; */
-      list-style: none;
-    }
-    ul li a {
-      text-decoration: none;
-    }
 /* GENERAL RULES (reset) - end */
 
 
@@ -66,6 +55,16 @@ class_properties {}
   .text-bold {
     font-weight: 700;
   }
+  ul.list-unstyled {
+    padding-left: 0;
+    }
+    ul.list-unstyled li {
+      display: inline-block;
+      list-style: none;
+    }
+    ul.list-unstyled li a {
+      text-decoration: none;
+    }
 /* CLASS PROPERTIES - end rules */
 
 
@@ -76,6 +75,7 @@ regole layout {}
     height: 100vh;
     width: 100%;
     min-width: 500px;
+    overflow: hidden;
     /* background-color: lightgreen; */
   }
   main {
@@ -199,10 +199,13 @@ main {}
       padding: 15px;
       overflow-y: auto;
     }
+    .menu-sidebar.playlist-container a {
+      text-decoration: none;
+    }
     .menu-sidebar .add-playlist {
       padding: 5px 0;
     }
-    .menu-sidebar a.playlist-title {
+    .menu-sidebar .bottom-menu--item a {
       text-decoration: none;
     }
     .menu-sidebar .add-playlist span {
@@ -244,34 +247,70 @@ main {}
   /* MAIN-CONTENT section */
   main .main-content {}
     .main-content {
-      background-color: lightgray;
+      background-color: black;
       width: calc(100% - 300px);
       height: 100%;
       padding: 20px;
       padding-top: 110px;
       float: left;
       overflow-y: auto;
+      color: darkgray;
     }
 
-    /* HEADER - topbar */
+    /* HEADER */
+    /* Topbar */
     .header {
       background-color: rgba(0,0,0,0.5);
-      text-align: right;
+      width: calc(100% - 300px);
+      height: 70px;
       position: fixed;
       top: 0;
       right: 0;
-      width: calc(100% - 300px);
-      height: 70px;
+      z-index: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
     }
 
     .header .topbar.btn-cta {
       background-color: black;
       border: 1px solid white;
       border-radius: 30px;
-      padding: 10px;
+      padding: 10px 35px;
       margin-right: 20px;
+      /* position: absolute;
+      right: 20px; */
       text-transform: uppercase;
       color: white;
+    }
+    .header .topbar.btn-cta:hover {
+      transform: scale(1.1);
+    }
+
+    /* Bottombar */
+    .header .bottombar {
+      /* width: calc(100% - 300px); */
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      margin-top: 90px;
+    }
+    .header .bottombar ul {
+      text-align: center;
+      line-height: 30px;
+    }
+    .header .bottombar ul li {
+      text-transform: uppercase;
+    }
+    .header .bottombar ul li a {
+      color: darkgray;
+      padding-right: 15px;
+    }
+    .header .bottombar ul li a:last-child {
+      padding-right: none;
+    }
+    .header .bottombar ul li:first-child {
+      border: 2px solid lime;
     }
 
 
@@ -348,24 +387,20 @@ footer {}
   }
 
   /* DEBUG-FOOTER - BASE-LAYOUT */
-  .left-col {
+  /* .left-col {
     background-color: blue;
-    height: 100%;
-    flex-basis: 20%;
   }
   .middle-col {
     background-color: orange;
-    height: 100%;
-    flex-basis: 60%;
   }
   .right-col {
     background-color: lightgreen;
-    height: 100%;
-    flex-basis: 20%;
-  }
+  } */
 
   /* Left-col */
-  .bottom-bar.left-col {
+  .bottom-bar.col.left-col {
+    height: 100%;
+    flex-basis: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -374,47 +409,129 @@ footer {}
     left: 0; */
   }
 
-  .bottom-bar .current-song {
+  .current-song {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
   }
-
-  .bottom-bar .current-song.img {
-    width: 50px;
-    height: 50px;
-    margin-right: 14px;
+  .current-song.img {
+    width: 90px;
+    height: 90px;
+    margin-right: 13px;
     display: flex;
     justify-content: flex-start;
     /* position: relative; */
   }
-  .bottom-bar.left-col.current-song.details {
+  .current-song.details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .bottom-bar.left-col.current-song.details a {
+  .current-song.details a {
     text-decoration: none;
   }
 
-  .bottom-bar.left-col.icons {
+  .icons {
     font-size: 20px;
-    padding: 0 20px;
+    padding-right: 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
-  .bottom-bar.left-col.icons a:hover {
+  .icons a:hover {
     color: white;
   }
 
+
+  /* Middle-col */
+  .bottom-bar.col.middle-col {
+    height: 100%;
+    flex-basis: 60%;
+    display: flex;
+    /* flex-flow: column wrap; */
+    justify-content: center;
+    flex-direction: column;
+  }
+  .player {
+    margin: 0 auto;
+    padding: 15px 0;
+    position: relative;
+  }
+  .player-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .player-buttons i {
+    font-size: 20px;
+    color: darkgray;
+  }
+  .player-buttons i:not(:last-child) {
+    margin-right: 30px;
+  }
+  /* .bottom-bar.col.middle-col .player-buttons .play-btn i {
+    font-size: 35px;
+  } */
+
+  .bottom-bar.col.middle-col .player-bar {
+    width: 70%;
+    min-width: 500px;
+  }
+
+  .player-bar {
+    border-bottom: solid 5px gray;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .player-bar--darkgray {
+    width: 30%;
+    border-bottom: 5px solid darkgray;
+    position: absolute;
+    left: 0;
+    top: 55px;
+    z-index: 1;
+  }
+  .player-bar-time-control {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: darkgray;
+    position: absolute;
+    left: 145px;
+    top: 49px;
+    display: none;
+  }
+
+  .player-bar--darkgray:hover {
+    border-bottom: 5px solid lime;
+  }
+  .player-bar--darkgray:hover .player-bar-time-control {
+    display: block;
+  }
+  /* .bottom-bar.col.middle-col .player-bar {
+    position: relative;
+  }
+  /* .bottom-bar.col.middle-col .player-bar .start-time {
+    position: absolute;
+    left: 80px;
+  }
+  .bottom-bar.col.middle-col .player-bar .end-time {
+    position: absolute;
+    left: 624px;
+  } */
+
   /* Right-col */
-  /* .bottom-bar.right-col {
+  .bottom-bar.col.right-col {
+    height: 100%;
+    flex-basis: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    /* position: relative;
-    left: 0; */
-  }  */
+    justify-content: flex-start;
+  }
 /* FOOTER - end rules */
 
 
@@ -426,16 +543,3 @@ footer {}
   @media all and (min-width: 768px) and (max-width: 991px) {}
   @media all and (min-width: 992px) {}
 /* MEDIA QUERY -end rules */
-
-
-/* BOOTSTRAP CLASS - start */
-/* bootstrap {}       /*  */
-  /* Navbar */
-  /* .navbar          /* Creates a navigation bar */
-  /* .navbar-collapse /* Collapses the navbar (hidden and replaced with a menu/hamburger icon on mobile phones and small tablets) */ */
-
-  /* List */
-  /* .list-group      /* Creates a bordered list group for <li> elements */ */
-  /* .list-inline     /* Places all list items on a single line (horizontal menu) */ */
-  /* .list-unstyled   /* Removes all default list-style (bullets, left margin, etc.) styling from a <ul> or <ol> list */ */
-/* BOOTSTRAP CLASS - end */
