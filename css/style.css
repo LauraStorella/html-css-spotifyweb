@@ -344,7 +344,7 @@ footer {}
   /* Left-col */
   .bottom-bar.left-col {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: row;
     /* position: relative;
     left: 0; */
