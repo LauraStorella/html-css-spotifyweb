@@ -297,6 +297,13 @@ main {}
     width: 180px;
     height: 180px;
   }
+
+  .section-body.popular .cover-item {
+    border: 50%;
+  }
+  .section-body.popular .cover-item img {
+    border-radius: 50%;
+  }
 /* MAIN - end rules */
 
 
