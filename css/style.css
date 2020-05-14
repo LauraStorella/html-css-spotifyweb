@@ -276,32 +276,26 @@ main {}
 
 
   /* ALBUM COVERS section */
-  .section-title {
-    margin-bottom: 10px;
-  }
   .title {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 0;
   }
-  .section {
-    border-color: 1px solid red;
-    /* width: calc(100% - 300px);
-    height: calc(100% - 170px); */
+
+  .section-body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    margin-bottom: 35px;
   }
-  .section-box {
-    flex-basis: 20%;
+
+  .section-body-item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
   }
-  .section-cover img {
-    width: 60%;
-  }
-  .section-cover a {
-    color: #b3b3b3;
-    font-size: 0.8rem;
-    text-decoration: none;
+
+  .cover-item {
+    width: 180px;
+    height: 180px;
   }
 /* MAIN - end rules */
 
