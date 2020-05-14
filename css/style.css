@@ -342,6 +342,26 @@ footer {}
     background-color: #181818;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+  }
+
+  /* DEBUG-FOOTER - BASE-LAYOUT */
+  .left-col {
+    background-color: blue;
+    height: 100%;
+    flex-basis: 20%;
+  }
+  .middle-col {
+    background-color: orange;
+    height: 100%;
+    flex-basis: 60%;
+  }
+  .right-col {
+    background-color: lightgreen;
+    height: 100%;
+    flex-basis: 20%;
   }
 
   /* Left-col */
@@ -378,6 +398,7 @@ footer {}
 
   .bottom-bar.left-col.icons {
     font-size: 20px;
+    padding: 0 20px;
     display: flex;
     align-items: flex-start;
   }
@@ -385,6 +406,15 @@ footer {}
     color: white;
   }
 
+  /* Right-col */
+  /* .bottom-bar.right-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    /* position: relative;
+    left: 0; */
+  }  */
 /* FOOTER - end rules */
 
 
