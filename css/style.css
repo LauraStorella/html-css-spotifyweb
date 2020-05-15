@@ -1,18 +1,3 @@
-/* DEBUGG - start rules*/
-/* debug {}
-  .debug .container {
-    background-color: #16D893;
-    border: 1px solid blue;
-  }
-  .debug [class*="col-"] {
-    background-color: yellow;
-    border: 1px solid red;
-    height: 100px;
-  } */
-/* DEBUGG - end rules */
-
-
-
 /* GENERAL RULES (reset) - start */
 general rules {}
   * {
@@ -38,9 +23,9 @@ general rules {}
 
 /* CLASS PROPERTIES - start rules */
 class_properties {}
-  /* .float {
+  .float {
     float: left;
-  } */
+  }
   .clearfix::after {
     content: "";
     display: table;
@@ -165,7 +150,6 @@ main {}
         padding-left: 0;
     }
     .sidebar-item li {
-      /* display: inline-block; */
       list-style: none;
     }
     .sidebar-item,
@@ -254,12 +238,8 @@ main {}
       font-size: 15px;
       font-weight: bold;
     }
-    /* .menu-sidebar.menu-utente {
-      position: fixed;
-      left: 0;
-      bottom: 90px;
-    } */
   /* SIDEBAR - fine */
+
 
   /* MAIN-CONTENT section */
   main .main-content {}
@@ -353,7 +333,6 @@ main {}
     width: 180px;
     height: 180px;
     position: relative;
-    /* z-index: 1; */
   }
 
   .overlay {
@@ -372,7 +351,6 @@ main {}
   .btn-play-wrapper i {
     font-size: 40px;
     color: white;
-    /* z-index: 2; */
  }
   .cover-item:hover .overlay,
   .cover-item:hover .btn-play-wrapper {
@@ -391,17 +369,6 @@ main {}
 
 /* FOOTER - start rules */
 footer {}
-  /* DEBUG-FOOTER - BASE-LAYOUT */
-  /* .left-col {
-    background-color: pink;
-  }
-  .middle-col {
-    background-color: orange;
-  }
-  .right-col {
-    background-color: lightgreen;
-  } */
-
   footer.player-tool {
     height: 100px;
     width: 100%;
@@ -480,8 +447,8 @@ footer {}
   .player-buttons i:not(:last-child) {
     margin-right: 30px;
   }
-  /* .bottom-bar.col.middle-col .player-buttons .play-btn i {
-    font-size: 35px;
+  /* .bottom-bar.col.middle-col .player-buttons i:nth-child(3) {
+    font-size: 30px;
   } */
 
   .bottom-bar.col.middle-col .player-bar {
@@ -514,24 +481,24 @@ footer {}
     top: 49px;
     display: none;
   }
-
   .player-bar--darkgray:hover {
     border-bottom: 5px solid lime;
   }
   .player-bar--darkgray:hover .player-bar-time-control {
     display: block;
   }
-  /* .bottom-bar.col.middle-col .player-bar {
+
+  .bottom-bar.col.middle-col .player-bar {
     position: relative;
   }
-  /* .bottom-bar.col.middle-col .player-bar .start-time {
+  .bottom-bar.col.middle-col .player-bar .start-time {
     position: absolute;
-    left: 80px;
+    left: -38px;
   }
   .bottom-bar.col.middle-col .player-bar .end-time {
     position: absolute;
-    left: 624px;
-  } */
+    left: 511px;
+  }
 
   /* Right-col */
   .bottom-bar.col.right-col {
@@ -548,12 +515,6 @@ footer {}
 
 /* MEDIA QUERY -start rules */
 @media query {}
-  @media all and (max-width: 767px) {}
-  @media all and (min-width: 768px) and (max-width: 991px) {}
-  @media all and (min-width: 992px) and (max-width: 1199px) {}
-  @media all and (min-width: 1200px) {}
-
-
   /* Media Query - xs  */
   @media all and (max-width: 767px) {
     .sidebar {
@@ -586,3 +547,17 @@ footer {}
     }
   }
 /* MEDIA QUERY -end rules */
+
+
+/* DEBUGG - start rules*/
+/* debug {}
+  .debug .container {
+    background-color: #16D893;
+    border: 1px solid blue;
+  }
+  .debug [class*="col-"] {
+    background-color: yellow;
+    border: 1px solid red;
+    height: 100px;
+  } */
+/* DEBUGG - end rules */
