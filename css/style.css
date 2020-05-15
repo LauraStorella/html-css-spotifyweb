@@ -182,8 +182,16 @@ main {}
     .sidebar-item .top-menu li:first-child a {
       color: white;
     }
-    .sidebar-item .top-menu li:first-child {
+    .sidebar-item .top-menu li:first-child::before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      padding-top: 20px;
       border-left: 2px solid lime;
+      position: absolute;
+      left: 0;
+      top: 120px;
     }
 
     /* Menu Playlist */
@@ -305,8 +313,13 @@ main {}
     .header .bottombar ul li a:last-child {
       padding-right: none;
     }
-    .header .bottombar ul li:first-child {
-      border: 2px solid lime;
+    .header .bottombar ul li:first-child::after {
+      content: "";
+      display: block;
+      margin: -23px 18px;
+      width: 50%;
+      padding-top: 20px;
+      border-bottom: 2px solid lime;
     }
 
 
