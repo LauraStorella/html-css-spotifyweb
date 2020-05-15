@@ -185,10 +185,15 @@ main {}
 
     /* Top menu */
     .sidebar-item .top-menu img {
-      width: 25px;
+      width: 30px;
+      padding-right: 5px;
+      vertical-align: middle;
     }
     .sidebar-item .top-menu a {
       text-decoration: none;
+    }
+    .sidebar-item .top-menu li {
+      margin-bottom: 10px;
     }
     .sidebar-item .top-menu li:first-child a {
       color: white;
@@ -213,7 +218,7 @@ main {}
       text-decoration: none;
     }
     .menu-sidebar .add-playlist span {
-      font-size: 20px;
+      font-size: 15px;
     }
     .bottom-menu--item>li:first-child {
       margin-top: 10px;
@@ -224,28 +229,36 @@ main {}
     .menu-sidebar.playlist-container li {
       list-style: none;
     }
-    .menu-sidebar.playlist-container i {
-      font-size: 35px;
+    .menu-sidebar.playlist-container .add-playlist i {
+      font-size: 30px;
     }
     .menu-sidebar.playlist-container a {
+      font-size: 13px;
+    }
+    .bottom-menu .bottom-menu--item i {
       font-size: 15px;
     }
 
     /* Menu utente */
     .menu-sidebar.menu-utente {
       padding: 15px;
-      font-size: 16px;
+      font-size: 15px;
     }
     hr {
-      margin: 10px 0;
+      margin: 5px 0;
     }
     .menu-sidebar.menu-utente .avatar i {
       font-size: 35px;
     }
     .menu-sidebar.menu-utente .avatar span {
-      font-size: 18px;
+      font-size: 15px;
       font-weight: bold;
     }
+    /* .menu-sidebar.menu-utente {
+      position: fixed;
+      left: 0;
+      bottom: 90px;
+    } */
   /* SIDEBAR - fine */
 
   /* MAIN-CONTENT section */
