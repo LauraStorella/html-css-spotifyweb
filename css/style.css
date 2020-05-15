@@ -391,7 +391,18 @@ main {}
 
 /* FOOTER - start rules */
 footer {}
-  footer.player {
+  /* DEBUG-FOOTER - BASE-LAYOUT */
+  /* .left-col {
+    background-color: pink;
+  }
+  .middle-col {
+    background-color: orange;
+  }
+  .right-col {
+    background-color: lightgreen;
+  } */
+
+  footer.player-tool {
     height: 100px;
     width: 100%;
     padding: 5px;
@@ -403,56 +414,38 @@ footer {}
     color: white;
   }
 
-  /* DEBUG-FOOTER - BASE-LAYOUT */
-  /* .left-col {
-    background-color: blue;
-  }
-  .middle-col {
-    background-color: orange;
-  }
-  .right-col {
-    background-color: lightgreen;
-  } */
-
   /* Left-col */
   .bottom-bar.col.left-col {
     height: 100%;
+    color: darkgray;
     flex-basis: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    /* position: relative;
-    left: 0; */
+    flex-wrap: wrap;
   }
-
-  .current-song {
+  .wrapper-track {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
   }
-  .current-song.img {
-    width: 90px;
-    height: 90px;
-    margin-right: 13px;
-    display: flex;
-    justify-content: flex-start;
-    /* position: relative; */
-  }
-  .current-song.details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  .track-item img {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
   }
   .current-song.details a {
     text-decoration: none;
+    padding-right: 90px;
+    color: darkgray;
   }
-
-  .icons {
+  .icons i {
     font-size: 20px;
+    color: darkgray;
+  }
+  .icons.favorite {
     padding-right: 20px;
-    display: flex;
-    align-items: center;
   }
   .icons a:hover {
     color: white;

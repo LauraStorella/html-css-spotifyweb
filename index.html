@@ -263,25 +263,20 @@
 
 
       <!-- Player - inizio -->
-      <footer id="player" class="player">
+      <footer id="player" class="player-tool">
         <!-- Left-col -->
         <div class="bottom-bar col left-col">
-          <div class="bottom-bar col left-col current-song">
-            <div class="bottom-bar col left-col current-song img">
-                <img src="img/sinister.jpeg" alt="sinister-song">
-            </div>
 
-            <div class="bottom-bar col left-col current-song details">
-              <div class="song-title">
-                <a href="#" class="">Sinister</a>
-              </div>
-              <div class="artist-name">
-                <a href="#" class="">Brano Nome</a>
-              </div>
-            </div>
+          <div class="bottom-bar col left-col track-item current-song img">
+              <img src="img/sinister.jpeg" alt="sinister-song">
           </div>
 
-          <div class="bottom-bar col left-col icons">
+          <div class="bottom-bar col left-col track-item current-song details">
+            <a href="#" class=""> <span class="track-item artist-name">Sinister</span></a>
+            <a href="#" class=""> <span class="track-item track-name">Brano Nome</span></a>
+          </div>
+
+          <div class="bottom-bar col left-col track-item icons-wrapper">
             <span class="bottom-bar col left-col icons favorite">
               <a href="#"><i class="far fa-heart"></i></a>
             </span>
@@ -289,6 +284,7 @@
               <a href="#"><i class="far fa-folder"></i></a>
             </span>
           </div>
+
         </div>
 
         <!-- Middle-col -->
